@@ -66,12 +66,6 @@
 
 		</div>
 
-		<div class="clear"></div>
-
-		<div class="postbox-sidebar">
-			<?php dynamic_sidebar( 'beneath-post-box' ); ?>
-		</div>
-
 	</div><!--/.postboxcontent -->
 
 </div> <!-- // postbox -->

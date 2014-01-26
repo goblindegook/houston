@@ -2,24 +2,6 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
- * Add a new sidebar beneath the post box.
- */
-add_action( 'widgets_init', 'houston_register_sidebar' );
-function houston_register_sidebar() {
-	register_sidebar( array(
-		'name'          => __( 'Beneath Post Box', 'Houston' ),
-		'id'            => 'beneath-post-box',
-		'description'   => '',
-	    'class'         => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widgettitle">',
-		'after_title'   => '</h2>' )
-	);
-}
-
-
-/**
  * Tweak p2
  */
 add_action( 'init', 'houston_custom' );

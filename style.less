@@ -1,17 +1,17 @@
 /*
-Theme Name:     Houston
-Description:    Houston is a child theme for p2, designed by the folks at WooThemes. It features a device-agnostic design so the layout responds to suit the browser, making it easy to stay up to date when you're on the go. Houston also introduces a handy new widget region beanth the post box and features integration with the "p2 likes" plugin.
-Author:         woothemes
+Theme Name:     Korolyov
+Description:    Korolyov is a child theme for p2, based on Houston designed by the fine folks at WooThemes.
+Author:         woothemes, goblindegook
 Author URI: 	http://woothemes.com
 Template:       p2
 Version:        1.3.0
-Tags: 			green, blue, custom-colors, two-columns, fixed-width, rtl-language-support, right-sidebar, white, light, front-page-post-form, translation-ready, custom-background, custom-header, custom-menu, post-formats, sticky-post, theme-options
-
+Tags: 			blue, custom-colors, two-columns, fixed-width, rtl-language-support, right-sidebar, white, light, front-page-post-form, translation-ready, custom-background, custom-header, custom-menu, post-formats, sticky-post, theme-options
 
 Houston WordPress Theme, Copyright 2013 woothemes.com
-Houston is distributed under the terms of the GNU GPL
 
-Houston makes use of the following resources:
+Korolyov is distributed under the terms of the GNU GPL.
+
+Korolyov makes use of the following resources:
 * FontAwesome Icon font. License: SIL Open Font License (OFL) - http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 
 */
@@ -23,15 +23,15 @@ Houston makes use of the following resources:
 /**
  * Vars
  */
-@woothemes: 	#42a2ce;
-@color_body: 	#4a5151;
-@color_links: 	@woothemes;
-@bg_light: 		#fff;
+@blue: 			rgb(129, 177, 219);
 @green: 		#8dc05d;
 @red: 			#df8375;
+@color_body: 	#4a5151;
+@bg_light: 		rgb(255, 255, 255);
+@bg_color: 		#fafafa;
 @color_alt: 	#42a2ce;
 @border_main:	#dfdfdf;
-
+@color_links: 	@blue;
 
 /**
  * Helpers
@@ -49,7 +49,7 @@ Houston makes use of the following resources:
 	left:50%;
 	width:600px;
 	margin-left:-300px;
-	background-color: rgba(255,255,255,0.95);
+	background-color: fade(@bg_light, 95%);
 	padding:2.618em;
 	.borderbox;
 	.border_radius;
@@ -91,11 +91,11 @@ Houston makes use of the following resources:
 	padding:1em;
 	display: none;
 	font-size: 1.387em;
-	border-top:.236em solid @woothemes;
+	border-top:.236em solid @blue;
 	&:before {
 		.iconbefore;
 		content: "\f05a";
-		color: @woothemes;
+		color: @blue;
 	}
 }
 
@@ -116,7 +116,7 @@ Houston makes use of the following resources:
 html {
 	font-size:.875em;
 	line-height: 1.387;
-	background-color: #fafafa;
+	background-color: @bg_color;
 }
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -326,6 +326,32 @@ table {
 	}
 }
 
+/**
+ * Profile page table
+ */
+
+.profile {
+	form {
+		table {
+			border: none;
+			background-color: transparent;
+
+			th,
+			td {
+				background-color: transparent;
+				border: none;
+			}
+
+			tr:nth-child(2n) {
+				th,
+				td {
+					background-color: transparent;
+					border: none;
+				}
+			}
+		}
+	}
+}
 
 /**
  * Images
@@ -394,12 +420,12 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sea
 	.transition;
 	.inset_box_shadow(0,1px,2px,0,rgba(0,0,0,0.025));
 	&:active, &:focus {
-		border-color:@woothemes;
+		border-color:@blue;
 		-webkit-box-shadow:
-			0 0 .618em fade(@woothemes,50%),
+			0 0 .618em fade(@blue,50%),
 			inset 0 1px 2px rgba(0,0,0,0.1);
 		box-shadow:
-			0 0 .618em fade(@woothemes,50%),
+			0 0 .618em fade(@blue,50%),
 			inset 0 1px 2px rgba(0,0,0,0.1);
 	}
 }
@@ -415,12 +441,12 @@ button {
 	text-decoration: none;
 	padding:.857em 1.387em;
 	.border_radius;
-	color: desaturate(@green,20%) + #777;
-	background-color: @green;
+	color: desaturate(@blue,20%) + #777;
+	background-color: @blue;
 	font-weight: 700;
 	&:hover {
-		background-color: @green - #111;
-		color: desaturate(@green,20%) + #777;
+		background-color: @blue - #111;
+		color: desaturate(@blue,20%) + #777;
 	}
 }
 #wp-posttext-wrap {
@@ -699,7 +725,7 @@ h2 .controls {
 		}
 		#searchsubmit {
 			&:hover {
-				background-color: @green;
+				background-color: @blue;
 				color: #fff;
 			}
 		}
@@ -725,6 +751,7 @@ h2 .controls {
 		border-width:1px 0;
 	}
 }
+
 #postlist {
 	clear: both;
 	padding:0;
@@ -742,7 +769,6 @@ h2 .controls {
 		left:50%;
 		height: 100%;
 		width:1px;
-		background-color: @bg_light - #1a1a1a;
 		z-index: -2;
 	}
 	li.post, li.comment {
@@ -1087,7 +1113,6 @@ h2 .controls {
 	.clearfix;
 	margin-bottom:1.618em;
 	padding-top:1.618em;
-	border-top:1px solid @bg_light - #222;
 	.nav-older {
 		float: left;
 	}
@@ -1141,6 +1166,11 @@ h2 .controls {
 		.border_radius_left(0);
 		padding-top:.43em;
 		padding-bottom:.43em;
+		&:before {
+			.iconbefore;
+			color: rgb(255, 255, 255);
+			content: "\f05c";
+		}
 	}
 	label {
 		display: none;
@@ -1323,6 +1353,11 @@ h2 .controls {
 		margin-bottom:1em;
 		padding-bottom:1em;
 		border-bottom:1px solid rgba(0,0,0,0.05);
+		&.wpwhosonline-active {
+			> span {
+				color: @green;
+			}
+		}
 		> img {
 			margin-right:1em !important;
 		}
@@ -1557,7 +1592,7 @@ h2 .controls {
 		}
 	}
 	#postbox {
-		.column(4);
+		// .column(4);
 		#new_post {
 			textarea, input#tags {
 				border-width:1px;
@@ -1671,7 +1706,7 @@ h2 .controls {
 	background: none !important;
 }
 
-@media only screen and ( min-width: 768px ) and ( max-width: 1200px ) {
+@media only screen and ( min-width: 768px ) {
 	#postbox {
 		width:100%;
 		margin:0;
@@ -1684,6 +1719,10 @@ h2 .controls {
 	}
 	.sleeve_main {
 		.column(9);
+	}
+	.page-template-page-login-php .sleeve_main {
+		.column(8);
+		.push(2);
 	}
 	#sidebar {
 		.column(3);

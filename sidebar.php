@@ -5,15 +5,16 @@
  * @package P2
  */
 ?>
-	<div id="sidebar">
-	<?php do_action( 'before_sidebar' ); ?>
 
-		<ul>
-			<?php
-				dynamic_sidebar( 'Sidebar' );
-			?>
-		</ul>
+<div id="sidebar">
+<?php do_action( 'before_sidebar' ); ?>
 
-		<div class="clear"></div>
+	<ul>
+		<?php
+			dynamic_sidebar( 'Sidebar' );
+		?>
+	</ul>
 
-	</div> <!-- // sidebar -->
+	<div class="clear"></div>
+
+</div> <!-- // sidebar -->
