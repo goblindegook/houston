@@ -19,14 +19,15 @@ jQuery(document).ready(function($){
     // Also scroll to top when postbox textarea is focused
     $( '#postbox .inputarea textarea' ).focus(function () {
         $( 'body,html' ).animate({
-            scrollTop: 0
+            // scrollTop: 0
         }, 800);
         return false;
     });
 
     // Hide the tag / submit inputs until the postbox label is clicked
     $( '#postbox .inputs' ).hide();
-    $( '#post-prompt' ).click(function () {
+
+    $('#post-prompt').click(function(e) {
         $(this).toggleClass( 'active' );
         $( '#postbox .inputs' ).slideToggle( 400 );
         $( '#posttext' ).focus();
@@ -42,7 +43,7 @@ jQuery(document).ready(function($){
     });
 
     $("#posttitle").blur(function(e) {
-        if ($("#posttitle").val() !== '') {
+        if ($("#posttitle").val().length === 0) {
             $('#post_format').val('');
         } else {
             $('#post_format').val('status');

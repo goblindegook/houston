@@ -627,12 +627,18 @@ img.avatar {
 	}
 	#media-buttons {
 		float: right;
+		position: relative;
+		top: -3.5em;
+		right: 1em;
+		height: 0;
 	}
 	#insert-media-button {
 		.ir;
 		&:before {
 			.icon;
 			content: "\f03e";
+			top: 0.45em;
+			font-size: 1.5em;
 		}
 	}
 	input[type="text"] {
@@ -1108,7 +1114,14 @@ h2 .controls {
 			background-color: transparent;
 		}
 	}
+
+	.inlineediting {
+		.actions {
+			display: none;
+		}
+	}
 }
+
 .navigation {
 	.clearfix;
 	margin-bottom:1.618em;

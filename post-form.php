@@ -32,18 +32,15 @@
 							placeholder="<?php echo esc_attr( __( 'Post Title', 'p2' ) ); ?>" />
 					</div>
 
-					<!--
-					<div id="media-buttons" class="hide-if-no-js">
-						<?php p2_media_buttons(); ?>
-					</div>
-					-->
-
 					<?php endif; ?>
 
 					<textarea class="expand70-200" name="posttext" id="posttext" rows="4" cols="60"></textarea>
 
 					<label class="post-error" for="posttext" id="posttext_error"></label>
 					<div class="postrow">
+						<div id="media-buttons" class="hide-if-no-js">
+							<?php p2_media_buttons(); ?>
+						</div>
 						<input id="tags" name="tags" type="text" autocomplete="off" value=""
 							placeholder="<?php echo esc_attr( __( 'Tag it', 'p2' ) ); ?>" />
 						<input id="submit" type="submit" value="<?php esc_attr_e( 'Post it', 'p2' ); ?>" />

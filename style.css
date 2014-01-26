@@ -1285,6 +1285,10 @@ img.avatar {
 }
 #postbox #media-buttons {
   float: right;
+  position: relative;
+  top: -3.5em;
+  right: 1em;
+  height: 0;
 }
 #postbox #insert-media-button {
   display: block;
@@ -1311,6 +1315,8 @@ img.avatar {
   text-align: center;
   content: "\f179";
   content: "\f03e";
+  top: 0.45em;
+  font-size: 1.5em;
 }
 #postbox input[type="text"] {
   width: 100%;
@@ -1984,6 +1990,9 @@ h2 .controls a#togglecomments:before {
 }
 #postlist .meta .p2-likes-user {
   background-color: transparent;
+}
+#postlist .inlineediting .actions {
+  display: none;
 }
 .navigation {
   *zoom: 1;
