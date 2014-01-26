@@ -4,7 +4,7 @@ Description:    Korolyov is a child theme for p2, based on Houston designed by t
 Author:         woothemes, goblindegook
 Author URI: 	http://woothemes.com
 Template:       p2
-Version:        1.3.0
+Version:        1.0.0
 Tags: 			blue, custom-colors, two-columns, fixed-width, rtl-language-support, right-sidebar, white, light, front-page-post-form, translation-ready, custom-background, custom-header, custom-menu, post-formats, sticky-post, theme-options
 
 Houston WordPress Theme, Copyright 2013 woothemes.com
@@ -551,7 +551,7 @@ img.avatar {
 	}
 	#new_post {
 		.borderbox;
-		textarea, input#tags {
+		textarea, input[type="text"] {
 			border:0;
 			.border_radius(0);
 			.inset_box_shadow(0,1px,2px,0,rgba(0,0,0,0.05));
@@ -635,7 +635,7 @@ img.avatar {
 			content: "\f03e";
 		}
 	}
-	input#tags {
+	input[type="text"] {
 		width:100%;
 		margin-bottom:1em;
 	}
@@ -1166,11 +1166,6 @@ h2 .controls {
 		.border_radius_left(0);
 		padding-top:.43em;
 		padding-bottom:.43em;
-		&:before {
-			.iconbefore;
-			color: rgb(255, 255, 255);
-			content: "\f05c";
-		}
 	}
 	label {
 		display: none;
@@ -1594,7 +1589,7 @@ h2 .controls {
 	#postbox {
 		// .column(4);
 		#new_post {
-			textarea, input#tags {
+			textarea, input[type="text"] {
 				border-width:1px;
 			}
 			input[type=submit] {
@@ -1633,6 +1628,13 @@ h2 .controls {
 		.credit {
 			.column(12);
 		}
+	}
+}
+
+.searchform {
+	#searchsubmit {
+		// .icon_button;
+		// content: "\f133";
 	}
 }
 
@@ -1720,7 +1722,7 @@ h2 .controls {
 	.sleeve_main {
 		.column(9);
 	}
-	.page-template-page-login-php .sleeve_main {
+	.theme-my-login .sleeve_main {
 		.column(8);
 		.push(2);
 	}

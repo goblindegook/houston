@@ -1,40 +1,56 @@
 (function ($) {
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
+
+    p2txt.tagit = '';
 
 	// Navigation
-    if ( jQuery(window).width() <= 768 ) {
-        jQuery( '#header ul.menu' ).hide();
+    if ( $(window).width() <= 768 ) {
+        $( '#header ul.menu' ).hide();
     }
-	jQuery( '.site-navigation h1.assistive-text' ).click(function(e) {
-        jQuery( '#header ul.menu' ).slideToggle();
+	$( '.site-navigation h1.assistive-text' ).click(function(e) {
+        $( '#header ul.menu' ).slideToggle();
     });
 
     // Add .parent class to appropriate menu items
-    jQuery( 'ul.sub-menu' ).parent().addClass( 'parent' );
+    $( 'ul.sub-menu' ).parent().addClass( 'parent' );
 
-    jQuery( 'body' ).fitVids();
-
-    // Fix the post box when scrolling
-    var breakpoint  = 1200;
+    $( 'body' ).fitVids();
 
     // Also scroll to top when postbox textarea is focused
-    jQuery( '#postbox .inputarea textarea' ).focus(function () {
-        jQuery( 'body,html' ).animate({
+    $( '#postbox .inputarea textarea' ).focus(function () {
+        $( 'body,html' ).animate({
             scrollTop: 0
         }, 800);
         return false;
     });
 
     // Hide the tag / submit inputs until the postbox label is clicked
-    jQuery( '#postbox .inputs' ).hide();
-    jQuery( '#post-prompt' ).click(function () {
-        jQuery(this).toggleClass( 'active' );
-        jQuery( '#postbox .inputs' ).slideToggle( 400 );
-        jQuery( '#posttext' ).focus();
+    $( '#postbox .inputs' ).hide();
+    $( '#post-prompt' ).click(function () {
+        $(this).toggleClass( 'active' );
+        $( '#postbox .inputs' ).slideToggle( 400 );
+        $( '#posttext' ).focus();
         return false;
     });
 
+    $('#post-types a').click(function(e) {
+        $('.post-input').hide();
+        $('#post-types a').removeClass('selected');
+        $(this).addClass('selected');
+        $('#postbox-type-' + $(this).attr('id')).show();
+        return false;
+    });
+
+    $("#posttitle").blur(function(e) {
+        if ($("#posttitle").val() !== '') {
+            $('#post_format').val('');
+        } else {
+            $('#post_format').val('status');
+        }
+    });
+
 });
+
 jQuery(window).resize(function(){
 
     // Navigation
