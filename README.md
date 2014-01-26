@@ -1,4 +1,4 @@
-# Houston
+# Korolyov
 
 Korolyov is a child theme for [p2](http://p2theme.com/) based on [Houston](http://wordpress.org/themes/houston), as designed by the fine folks at [WooThemes](http://woothemes.com). It features a device-agnostic design so the layout responds to suit the browser, making it easy to stay up to date when you're on the go.
 
