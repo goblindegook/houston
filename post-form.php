@@ -25,13 +25,12 @@
 				</label>
 				<?php endif; ?>
 				<div class="inputs">
-
+				
 					<?php if ('status' == $post_format || 'standard' == $post_format || empty( $post_format )) : ?>
 					<div class="postrow">
 						<input type="text" name="posttitle" id="posttitle" value=""
 							placeholder="<?php echo esc_attr( __( 'Post Title', 'p2' ) ); ?>" />
 					</div>
-
 					<?php endif; ?>
 
 					<textarea class="expand70-200" name="posttext" id="posttext" rows="4" cols="60"></textarea>

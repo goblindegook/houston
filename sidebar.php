@@ -6,6 +6,8 @@
  */
 ?>
 
+<?php if (!p2_get_hide_sidebar()) : ?>
+
 <div id="sidebar">
 <?php do_action( 'before_sidebar' ); ?>
 
@@ -18,3 +20,5 @@
 	<div class="clear"></div>
 
 </div> <!-- // sidebar -->
+
+<?php endif; ?>

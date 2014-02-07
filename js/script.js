@@ -6,9 +6,11 @@ jQuery(document).ready(function($){
 	// Navigation
     if ( $(window).width() <= 768 ) {
         $( '#header ul.menu' ).hide();
+        $( '#header .widget_search' ).hide();
     }
 	$( '.site-navigation h1.assistive-text' ).click(function(e) {
         $( '#header ul.menu' ).slideToggle();
+        $( '#header .widget_search' ).slideToggle();
     });
 
     // Add .parent class to appropriate menu items
@@ -43,7 +45,7 @@ jQuery(document).ready(function($){
     });
 
     $("#posttitle").blur(function(e) {
-        if ($("#posttitle").val().length === 0) {
+        if ($("#posttitle").val().length !== 0) {
             $('#post_format').val('');
         } else {
             $('#post_format').val('status');

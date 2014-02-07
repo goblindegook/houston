@@ -45,4 +45,4 @@
 	</div>
 </div>
 
-<div id="wrapper">
+<div id="wrapper" class="<?php if (p2_get_hide_sidebar()) echo "no-sidebar"; ?>">

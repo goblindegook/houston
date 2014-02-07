@@ -5,7 +5,7 @@ Description:    Korolyov is a child theme for p2, based on Houston designed by t
 Author:         goblindegook
 Author URI:     https://github.com/goblindegook/
 Template:       p2
-Version:        1.0.1
+Version:        1.0.2
 License:        GNU General Public License v3.0
 License URI:    http://www.gnu.org/licenses/gpl-3.0.html
 Tags:           blue, custom-colors, two-columns, responsive-layout, rtl-language-support, right-sidebar, white, light, front-page-post-form, translation-ready, custom-background, custom-header, custom-menu, post-formats, sticky-post, theme-options
@@ -118,7 +118,7 @@ Korolyov makes use of the following resources:
 html {
 	font-size:.875em;
 	line-height: 1.387;
-	background-color: @bg_color;
+	// background-color: @bg_color;
 }
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -501,6 +501,7 @@ a {
 	padding:1.618em 0;
 	position: relative;
 	background-color: @bg_light;
+	height: inherit !important;
 	small {
 		display: none;
 	}
@@ -511,6 +512,15 @@ a {
 			font-weight: 700;
 		}
 	}
+
+	a.secondary {
+		display: none !important;
+	}
+
+	.sleeve {
+		height: inherit !important;
+	}
+
 	.menu {
 		margin:0;
 		padding:0;
@@ -1006,6 +1016,7 @@ h2 .controls {
 	}
 	.meta {
 		display: block;
+		font-size: 1.2em;
 		abbr {
 			font-weight: normal;
 			border:0;
@@ -1736,10 +1747,11 @@ h2 .controls {
 	}
 	.sleeve_main {
 		.column(9);
-	}
-	.theme-my-login .sleeve_main {
-		.column(8);
-		.push(2);
+		.no-sidebar &,
+		.theme-my-login & {
+			.column(8);
+			.push(2);
+		}
 	}
 	#sidebar {
 		.column(3);
