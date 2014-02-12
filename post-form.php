@@ -26,7 +26,7 @@
 				<?php endif; ?>
 				<div class="inputs">
 				
-					<?php if ('status' == $post_format || 'standard' == $post_format || empty( $post_format )) : ?>
+					<?php if ('standard' == $post_format || empty( $post_format )) : ?>
 					<div class="postrow">
 						<input type="text" name="posttitle" id="posttitle" value=""
 							placeholder="<?php echo esc_attr( __( 'Post Title', 'p2' ) ); ?>" />
