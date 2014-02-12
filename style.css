@@ -1537,6 +1537,7 @@ h2 .controls a#togglecomments:before {
   width: 1px;
   z-index: -2;
 }
+#postlist li.no-posts,
 #postlist li.post,
 #postlist li.comment {
   margin: 0;
@@ -1544,19 +1545,23 @@ h2 .controls a#togglecomments:before {
   padding: 1.618em 0 0 0;
   position: relative;
 }
+#postlist li.no-posts h4:first-of-type,
 #postlist li.post h4:first-of-type,
 #postlist li.comment h4:first-of-type {
   margin-bottom: 1em;
   line-height: 1.387;
 }
+#postlist li.no-posts h4:first-of-type a,
 #postlist li.post h4:first-of-type a,
 #postlist li.comment h4:first-of-type a {
   font-weight: 700;
 }
+#postlist li.no-posts a,
 #postlist li.post a,
 #postlist li.comment a {
   font-weight: 400;
 }
+#postlist li.no-posts ul,
 #postlist li.post ul,
 #postlist li.comment ul {
   list-style-type: disc;
@@ -1570,7 +1575,8 @@ h2 .controls a#togglecomments:before {
   padding: 0;
   margin: 0;
 }
-#postlist > li.post,
+#postlist > li.no-posts,
+#postlist li.post,
 #postlist li.type-page {
   margin-bottom: 1.618em;
   padding: 1.618em;
@@ -1580,7 +1586,8 @@ h2 .controls a#togglecomments:before {
   position: relative;
   background: #fff;
 }
-#postlist > li.post:before,
+#postlist > li.no-posts:before,
+#postlist li.post:before,
 #postlist li.type-page:before {
   content: "";
   display: block;
@@ -1592,7 +1599,8 @@ h2 .controls a#togglecomments:before {
   background-color: #fff;
   z-index: -1;
 }
-#postlist > li.post:first-child,
+#postlist > li.no-posts:first-child,
+#postlist li.post:first-child,
 #postlist li.type-page:first-child {
   border-top-width: 0;
   -webkit-border-top-left-radius: 0;
@@ -1600,7 +1608,8 @@ h2 .controls a#togglecomments:before {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-#postlist > li.post:hover .meta .actions,
+#postlist > li.no-posts:hover .meta .actions,
+#postlist li.post:hover .meta .actions,
 #postlist li.type-page:hover .meta .actions {
   filter: alpha(opacity=@opacity * 100);
   -moz-opacity: 1;
