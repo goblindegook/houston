@@ -1571,10 +1571,6 @@ h2 .controls a#togglecomments:before {
 #postlist li.newcomment {
   background-color: #F6F3D1;
 }
-#postlist ul {
-  padding: 0;
-  margin: 0;
-}
 #postlist > li.no-posts,
 #postlist li.post,
 #postlist li.type-page {
