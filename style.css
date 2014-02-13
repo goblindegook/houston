@@ -2194,6 +2194,12 @@ h2 .controls a#togglecomments:before {
   padding-top: .53em;
   padding-bottom: .53em;
 }
+#infscr-loading {
+  text-align: center;
+}
+#infscr-loading div {
+  padding: 16px;
+}
 #footer .credit {
   padding: 1.618em 0;
   border-top: 1px solid #dddddd;
