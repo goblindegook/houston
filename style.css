@@ -2197,6 +2197,10 @@ h2 .controls a#togglecomments:before {
 #infscr-loading {
   text-align: center;
 }
+#infscr-loading img {
+  display: inline;
+  margin: 0 auto;
+}
 #infscr-loading div {
   padding: 16px;
 }
