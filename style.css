@@ -10,11 +10,10 @@ License:        GNU General Public License v3.0
 License URI:    http://www.gnu.org/licenses/gpl-3.0.html
 Tags:           blue, custom-colors, two-columns, responsive-layout, rtl-language-support, right-sidebar, white, light, front-page-post-form, translation-ready, custom-background, custom-header, custom-menu, post-formats, sticky-post, theme-options
 
-Houston WordPress Theme, Copyright 2013 woothemes.com
-
 Korolyov makes use of the following resources:
 
-* FontAwesome Icon font. License: SIL Open Font License (OFL) - http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+* Houston by woothemes.com. GNU General Public License v3.0 - http://www.gnu.org/licenses/gpl-3.0.html
+* FontAwesome Icon Font. SIL Open Font License (OFL) - http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 
 */
 /**
@@ -1106,7 +1105,7 @@ a:hover {
   margin-bottom: 2.618em;
   padding: 1.618em 0;
   position: relative;
-  background-color: #ffffff;
+  background-color: #81b1db;
   height: inherit !important;
 }
 #header small {
@@ -1116,8 +1115,8 @@ a:hover {
   margin: 0;
 }
 #header h1 a {
-  color: #4a5151;
-  font-weight: 700;
+  color: #ffffff;
+  font-weight: 300;
 }
 #header a.secondary {
   display: none !important;
@@ -1134,7 +1133,7 @@ a:hover {
 }
 #header .menu li a {
   display: block;
-  color: #4a5151;
+  color: #ffffff;
   font-weight: 400;
   text-decoration: none;
 }
@@ -1147,6 +1146,7 @@ a:hover {
   border: 0;
   padding-top: .53em;
   padding-bottom: .53em;
+  background-color: #4a5151;
 }
 .header-inner,
 #wrapper,
@@ -2364,7 +2364,7 @@ h2 .controls a#togglecomments:before {
     float: right;
     margin-left: 0;
     margin-right: 0;
-    margin-top: .75em;
+    margin-top: 1em;
     padding: 0;
   }
   #header .widget_search #s {
@@ -2390,12 +2390,12 @@ h2 .controls a#togglecomments:before {
   }
   #header .menu li a {
     display: inline-block;
-    padding: 1.15em 1em;
+    padding: 1.4em 0.8em 1em 0.8em;
     font-size: 1em;
   }
   #header .menu li a:hover {
     color: #ffffff;
-    background-color: #77a7d1;
+    background-color: #70a0ca;
   }
   #header .site-navigation {
     /**
@@ -2415,7 +2415,7 @@ h2 .controls a#togglecomments:before {
   }
   #header .site-navigation li:hover > a {
     color: #ffffff;
-    background-color: #77a7d1;
+    background-color: #70a0ca;
   }
   #header .site-navigation li:hover > .sub-menu {
     filter: alpha(opacity=@opacity * 100);
@@ -2441,7 +2441,7 @@ h2 .controls a#togglecomments:before {
     width: 15.379em;
     padding: 0;
     margin: 0;
-    background: #77a7d1;
+    background: #70a0ca;
     filter: alpha(opacity=@opacity * 100);
     -moz-opacity: 0;
     -khtml-opacity: 0;
