@@ -1519,6 +1519,18 @@ h2 .controls a#togglecomments:before {
   border: 1px solid #dddddd;
   border-width: 1px 0;
 }
+#main div.no-posts {
+  margin-bottom: 1.618em;
+  padding: 1.618em;
+  border: 1px solid #dddddd;
+  border-width: 0 1px 1px 1px;
+  position: relative;
+  background: #fff;
+  -webkit-border-bottom-left-radius: 0.327em;
+  -webkit-border-bottom-right-radius: 0.327em;
+  border-bottom-left-radius: 0.327em;
+  border-bottom-right-radius: 0.327em;
+}
 #postlist {
   clear: both;
   padding: 0;
@@ -2676,6 +2688,14 @@ h2 .controls a#togglecomments:before {
     *margin-left: 1.9284002273813892%;
     *margin-right: 1.9284002273813892%;
   }
+  .theme-my-login .tml-action-links {
+    float: right;
+    position: relative;
+    top: -46px;
+  }
+  .theme-my-login .tml-action-links li {
+    display: inline-block;
+  }
 }
 /**
  * Autocomplete
@@ -2814,4 +2834,26 @@ h2 .controls a#togglecomments:before {
     *margin-left: 1.9284002273813892%;
     *margin-right: 1.9284002273813892%;
   }
+}
+.theme-my-login .message {
+  -webkit-border-radius: 0.327em;
+  border-radius: 0.327em;
+}
+.theme-my-login .tml-action-links {
+  margin: 0;
+  padding: 0;
+  float: right;
+  position: relative;
+  top: -46px;
+}
+.theme-my-login .tml-action-links li {
+  display: inline-block;
+  padding: 0 0.5em;
+}
+.theme-my-login #postlist .postcontent {
+  padding-bottom: 0;
+  -webkit-border-bottom-left-radius: 0.327em;
+  -webkit-border-bottom-right-radius: 0.327em;
+  border-bottom-left-radius: 0.327em;
+  border-bottom-right-radius: 0.327em;
 }
