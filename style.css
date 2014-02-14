@@ -624,6 +624,9 @@ table {
 .clear {
   clear: both;
 }
+.icon-font {
+  font-family: 'FontAwesome';
+}
 #help {
   display: none;
   position: absolute;
@@ -1144,8 +1147,7 @@ a:hover {
 }
 #header .widget_search #searchsubmit {
   border: 0;
-  padding-top: .53em;
-  padding-bottom: .53em;
+  padding: .53em 0;
   background-color: #4a5151;
 }
 .header-inner,
@@ -2368,11 +2370,11 @@ h2 .controls a#togglecomments:before {
     padding: 0;
   }
   #header .widget_search #s {
-    width: 60%;
+    width: 80%;
     padding: .382em;
   }
   #header .widget_search #searchsubmit {
-    width: 40%;
+    width: 20%;
   }
   #header .menu {
     *zoom: 1;

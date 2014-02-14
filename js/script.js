@@ -3,12 +3,12 @@ jQuery(document).ready(function($){
 
     p2txt.tagit = '';
 
-	// Navigation
+    // Navigation
     if ( $(window).width() <= 768 ) {
         $( '#header ul.menu' ).hide();
         $( '#header .widget_search' ).hide();
     }
-	$( '.site-navigation h1.assistive-text' ).click(function(e) {
+    $( '.site-navigation h1.assistive-text' ).click(function(e) {
         $( '#header ul.menu' ).slideToggle();
         $( '#header .widget_search' ).slideToggle();
     });
@@ -51,6 +51,9 @@ jQuery(document).ready(function($){
             $('#post_format').val('status');
         }
     });
+
+
+    $("#searchsubmit").addClass('icon-font').val('\uf002');
 
 });
 
