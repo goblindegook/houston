@@ -2363,7 +2363,7 @@ h2 .controls a#togglecomments:before {
     float: left;
   }
   #header h1 {
-    line-height: 2.244;
+    line-height: 2.3;
     max-height: 51px;
   }
   #header .widget_search {
@@ -2404,7 +2404,7 @@ h2 .controls a#togglecomments:before {
   }
   #header .menu li a {
     display: inline-block;
-    padding: 1.4em 0.8em 1em 0.8em;
+    padding: 1.3em 0.8em 1em 0.8em;
     font-size: 1em;
   }
   #header .menu li a:hover {
