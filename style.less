@@ -241,11 +241,6 @@ table {
 		border-right: 1px dotted @border_main;
 		vertical-align: top;
 
-        .p2-recent-mentions &,
-        .p2-recent-comments & {
-            border-right: none;
-        }
-
 		p:last-child {
 			margin-bottom: 0;
 		}
@@ -1380,12 +1375,18 @@ h2 .controls {
 	width: 16px !important;
 }
 
-// Mention Me Plugin
-.p2-recent-mentions {
+// P2 Mention Me Plugin
+// P2 Recent Comments Plugin
 
+.p2-recent-mentions,
+.p2-recent-comments {
+    td, th {
+        border-right: none;
+    }
 }
 
 // Who's online plugin
+
 .wpwhosonline-list {
 	.wpwhosonline-row {
 		margin-bottom:1em;

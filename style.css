@@ -854,12 +854,6 @@ table th {
   border-right: 1px dotted #dfdfdf;
   vertical-align: top;
 }
-.p2-recent-mentions table td,
-.p2-recent-mentions table th,
-.p2-recent-comments table td,
-.p2-recent-comments table th {
-  border-right: none;
-}
 table td p:last-child,
 table th p:last-child {
   margin-bottom: 0;
@@ -2293,6 +2287,12 @@ h2 .controls a#togglecomments:before {
 }
 .p2-resolved-posts-audit-log img {
   width: 16px !important;
+}
+.p2-recent-mentions td,
+.p2-recent-comments td,
+.p2-recent-mentions th,
+.p2-recent-comments th {
+  border-right: none;
 }
 .wpwhosonline-list .wpwhosonline-row {
   margin-bottom: 1em;
