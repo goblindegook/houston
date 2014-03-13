@@ -241,6 +241,11 @@ table {
 		border-right: 1px dotted @border_main;
 		vertical-align: top;
 
+        .p2-recent-mentions &,
+        .p2-recent-comments & {
+            border-right: none;
+        }
+
 		p:last-child {
 			margin-bottom: 0;
 		}
@@ -1377,26 +1382,7 @@ h2 .controls {
 
 // Mention Me Plugin
 .p2-recent-mentions {
-	td.avatar {
-		padding-right:1em;
-		width:16px !important;
-		height:16px !important;
-		vertical-align: top;
-		img {
-			width:16px;
-			height: auto;
-		}
-	}
-	td {
-		padding-bottom:1.618em;
-	}
-	tr {
-		&:last-child {
-			td {
-				padding-bottom:0;
-			}
-		}
-	}
+
 }
 
 // Who's online plugin
@@ -1410,6 +1396,9 @@ h2 .controls {
 				color: @green;
 			}
 		}
+        &.wpwhosonline-ancient {
+            display: none;
+        }
 		> img {
 			margin-right:1em !important;
 		}
