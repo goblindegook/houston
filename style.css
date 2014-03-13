@@ -1140,7 +1140,7 @@ a:hover {
   font-weight: 400;
   text-decoration: none;
 }
-#header .menu .current-menu-item {
+#header .menu .menu-item-type-blog.current-menu-item {
   display: none;
 }
 #header .widget_search #s {
