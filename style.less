@@ -1324,6 +1324,72 @@ h2 .controls {
  * Plugins
  */
 
+// Breadcrumb Trail Plugin
+
+#breadcrumb-trail {
+	margin: 0 -1.618rem;
+
+	.breadcrumb-trail {
+		background-color: @white;
+		border: 1px solid @border_main;
+		margin-bottom: 2.618rem;
+		padding: 1rem 1.618rem;
+
+		.trail-browse {
+			display: none;
+		}
+
+		/*
+		a,
+		.trail-end {
+			display: inline-block;
+			position: relative;
+			margin: 0;
+			padding: 1rem 1.618rem;
+
+			&:before {
+				content: "";  
+				border-top: 1.618rem solid transparent;
+				border-bottom: 1.618rem solid transparent;
+				border-left: 1.618rem solid @white;
+				position: absolute;
+				left: -1rem;
+				top: 1px;
+			}
+
+			&:after {
+				content: "";  
+				border-top: 1.618rem solid transparent;
+				border-bottom: 1.618rem solid transparent;
+				border-left: 1.618rem solid @border_main;
+				position: absolute;
+				right: -0.95rem;
+				top: 1px;
+			}
+		}
+
+		.trail-begin a:before,
+		.trail-end:after {
+			border: none;
+		}
+		*/
+	}
+}
+
+@media only screen and ( min-width: 768px ) {
+	#breadcrumb-trail {
+		.column(9);
+		.no-sidebar & {
+			.column(8);
+			.push(2);
+		}
+
+		.breadcrumb-trail {
+			.border_radius;
+		}
+	}
+}
+
 // Resolved Posts Plugin
 
 // Slightly hacky cause we need to override inline <styles>
@@ -1444,8 +1510,8 @@ h2 .controls {
 			.clearfix;
 		}
 		.sleeve {
-			margin-left:1.9804835607147224%;
-			margin-right:3.960967121%;
+			margin-left: 1.9804835607147224%;
+			margin-right: 3.960967121%;
 			float: left;
 		}
 		h1 {

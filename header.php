@@ -46,3 +46,10 @@
 </div>
 
 <div id="wrapper" class="<?php if (p2_get_hide_sidebar()) echo "no-sidebar"; ?>">
+
+	<div id="breadcrumb-trail">
+		<?php if (function_exists( 'breadcrumb_trail' )) breadcrumb_trail( array(
+			'separator' 	=> '&#9659;',
+			'show_on_front' => false,
+		) ); ?>
+	</div>
