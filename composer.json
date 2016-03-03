@@ -1,0 +1,10 @@
+{
+  "name": "goblindegook/korolyov",
+  "description": "Korolyov is a child theme for p2, based on Houston.",
+  "type": "wordpress-theme",
+  "license": "GPL 2.0+",
+  "require": {
+    "composer/installers": "^1.0",
+    "composer-plugin-api": "^1.0"
+  }
+}
